@@ -78,7 +78,7 @@ namespace APIExemplo.Controllers
         {
             if(produto.Preco < 0.01)
             {
-                return BadRequest();
+                return BadRequest("O valor do preço deve ser maior que R$0.01");
             }
                 
             _context.Produtos.Add(produto);
